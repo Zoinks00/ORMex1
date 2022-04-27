@@ -43,18 +43,19 @@ namespace ORMex1
             string userInput = Console.ReadLine();
            //do while statement to keep adding department while input = yes
            
-                
+               do
+            { 
                     Console.WriteLine("Enter new department now.");
                     userInput = Console.ReadLine();
-            do
-            {
+            
                     repo.InsertDepartment(userInput);
                    //display new list of departments
                    Print(repo.GetAllDepartments());
 
-                // reset userInput and repompte for input
-                userInput = Console.ReadLine();
+             
                 Console.WriteLine("Would you like to add another department?");
+   // reset userInput and repompte for input
+                userInput = Console.ReadLine();
             } while (userInput.ToLower() == "yes" || userInput.ToLower() == "y");
             
             Console.WriteLine("Press any key to close program");
